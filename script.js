@@ -13,15 +13,15 @@ const itemsArray = [
 ];
 
 const companies = [
-  {name: "Company One", category: "Finance", start: 1981, end: 2003},
-  {name: "Company Two", category: "Retail", start: 1992, end: 2003},
-  {name: "Company Three", category: "Auto", start: 1999, end: 2007},
-  {name: "Company Four", category: "Retail", start: 1989, end: 2010},
-  {name: "Company Five", category: "Technology", start: 2009, end: 2014},
-  {name: "Company Six", category: "Finance", start: 1987, end: 2010},
-  {name: "Company Seven", category: "Auto", start: 1986, end: 1996},
-  {name: "Company Eight", category: "Technology", start: 2011, end: 2016},
-  {name: "Company Nine", category: "Retail", start: 1981, end: 1989},
+  {name: "Company Afolabi", category: "Finance", start: 1981, end: 2003},
+  {name: "Company Afolake", category: "Retail", start: 1992, end: 2003},
+  {name: "Company Omolola", category: "Auto", start: 1999, end: 2007},
+  {name: "Company Olajumoke", category: "Retail", start: 1989, end: 2010},
+  {name: "Company Olaotan", category: "Technology", start: 2009, end: 2014},
+  {name: "Company Omodesire", category: "Finance", start: 1987, end: 2010},
+  {name: "Company Ayomikun", category: "Auto", start: 1986, end: 1996},
+  {name: "Company Ajibade", category: "Technology", start: 2011, end: 2016},
+  {name: "Company Adenike", category: "Retail", start: 1981, end: 1989},
 ]
 
 
@@ -40,14 +40,22 @@ ages = [42, 12, 13, 24, 30, 11, 8, 4, 23, 12, 21]
 // console.log("Eighties Companies: ", eightiesCompanies);
 // const tenYearsCompanies = companies.filter(company => (company.end - company.start) >= 10)
 // console.log(tenYearsCompanies);
-const lessThan10 = [];
-const moreThan10 = [];
-companies.map(company => {
-  if((company.end - company.start) >= 10) {
-    moreThan10.push(company)
-    }  else {
-      lessThan10.push(company)
-    }
-})
-console.log("MORE: ", moreThan10)
-console.log("LESS: ", lessThan10)
+// const lessThan10 = [];
+// const moreThan10 = [];
+// companies.map(company => {
+//   if((company.end - company.start) >= 10) {
+//     moreThan10.push(company)
+//     }  else {
+//       lessThan10.push(company)
+//     }
+// })
+// console.log("MORE: ", moreThan10)
+// console.log("LESS: ", lessThan10)
+
+const sortedCompaniesByYear = companies.sort((a, b) => (a.start < b.start) ? -1 : 1);
+const sortedCompaniesByName = companies.sort((a, b) => (a.name > b.name) ? 1 : -1) 
+// console.log(sortedCompaniesByName)
+
+sortedAges = ages.sort((a, b) => a - b);
+
+console.log(sortedAges)
