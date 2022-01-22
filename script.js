@@ -13,7 +13,7 @@ const itemsArray = [
 ];
 
 const companies = [
-  {name: "Company Afolabi", category: "Finance", start: 1981, end: 2003},
+  {name: "Company Afolabi", category: "Finance", start: 1981, end: 2004},
   {name: "Company Afolake", category: "Retail", start: 1992, end: 2003},
   {name: "Company Omolola", category: "Auto", start: 1999, end: 2007},
   {name: "Company Olajumoke", category: "Retail", start: 1989, end: 2010},
@@ -52,10 +52,14 @@ ages = [42, 12, 13, 24, 30, 11, 8, 4, 23, 12, 21]
 // console.log("MORE: ", moreThan10)
 // console.log("LESS: ", lessThan10)
 
-const sortedCompaniesByYear = companies.sort((a, b) => (a.start < b.start) ? -1 : 1);
-const sortedCompaniesByName = companies.sort((a, b) => (a.name > b.name) ? 1 : -1) 
-// console.log(sortedCompaniesByName)
+// const sortedCompaniesByYear = companies.sort((a, b) => (a.start < b.start) ? -1 : 1);
+// const sortedCompaniesByName = companies.sort((a, b) => (a.name > b.name) ? 1 : -1) 
+// // console.log(sortedCompaniesByName)
 
-sortedAges = ages.sort((a, b) => a - b);
+// sortedAges = ages.sort((a, b) => a - b);
 
-console.log(sortedAges)
+// console.log(sortedAges)
+totalAges = ages.reduce((total, age) => total + age, 0);
+totalYears = companies.reduce((total, company) =>  total + (company.end - company.start), 0)
+console.log(totalAges)
+console.log(totalYears)
